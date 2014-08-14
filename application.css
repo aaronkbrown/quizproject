@@ -1,0 +1,37 @@
+#grid {
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #a0d0ff;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  border: 5px solid #a0d0ff; }
+
+#dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ff30a0;
+  margin-left: calc(50% - 5px);
+  margin-top: calc(50% - 5px);
+  position: absolute;
+  transition: 0; }
+
+.answerClick {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 0.5em;
+  background-color: #ffa0c0;
+  width: 20em;
+  height: 1.5em;
+  text-align: center; }
+
+#getResults {
+  height: 30px;
+  width: 100px;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ff80a0; }
