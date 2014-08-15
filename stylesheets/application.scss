@@ -7,6 +7,23 @@ $mobile: "only screen and (max-width: 479px)";
 
 
 
+
+
+
+.wide-container {
+  max-width: 1000px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.slides-pagination {
+  display: none;
+}
+
+.slides-navigation a {
+  position: static;
+}
+
 #grid {
   margin-top: 2em;
   margin-left: auto;
