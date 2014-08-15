@@ -43,7 +43,7 @@ $("#getResults").click(function(){
     var whichCategory = categoryArray[questionsCount];
     var responseValue = responsesArray[questionsCount];
     // Check which category
-    if(whichCategory == "categoryA"){
+    if(whichCategory == "x-axis"){
       // If category A, get answer value
       if(responseValue == "agree"){
         // If agreed, add 1 to score in Category A
@@ -57,7 +57,7 @@ $("#getResults").click(function(){
       }
       // Increase overall Category A question count
       catAQuestions = catAQuestions + 1;
-    } else if(whichCategory == "categoryB"){
+    } else if(whichCategory == "y-axis"){
       // If category B, get answer value
       if(responseValue == "agree"){
         // If agreed, add 1 to score in Category B
@@ -88,6 +88,7 @@ $("#getResults").click(function(){
 
   offsetB = 0.5 - ((catBScore / catBQuestions) * 0.5);
 
+  // Adjust CSS positioning of #dot element on #grid by percentage
   $("#dot").css("margin-left", "calc((" + offsetA + " * 100%) - 5px)");
   $("#dot").css("margin-top", "calc((" + offsetB + " * 100%) - 5px)");
 });
