@@ -5,7 +5,9 @@ var responsesArray = [];
 // Array for tracking categories
 var categoryArray = [];
 
-
+// Debugging divs
+var divCat = document.getElementById("categoryArray");
+var divAns = document.getElementById("answerArray");
 
 
 // Fired when clicking on an answer
@@ -17,8 +19,24 @@ $(".answerClick").click(function(){
   // Add answer and category values to arrays at very front
   responsesArray.unshift(answerValue);
   categoryArray.unshift(categoryData);
+
+  // Debugging messages to make sure arrays are tracking properly
+  divCat.innerHTML = categoryArray;
+  divAns.innerHTML = responsesArray;
 });
 
+// Fired when clicking a back button
+$(".goBack").click(function(){
+
+  // Remove values from front position of answer tracking arrays
+  responsesArray.shift();
+  categoryArray.shift();
+
+  // Debugging messages to make sure arrays are tracking properly
+  divCat.innerHTML = categoryArray;
+  divAns.innerHTML = responsesArray;
+
+});
 
 //Adjust CSS of dot on grid using calculated offset values
 $("#getResults").click(function(){
