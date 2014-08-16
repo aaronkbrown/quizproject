@@ -1,3 +1,7 @@
+/** SimpleQuiz - v0.1 - 15-08-2014
+http://github.com/aaronkbrown
+Copyright (c) 2014 Aaron Brown;
+*/
 
 // Array for responses
 var responsesArray = [];
@@ -13,6 +17,12 @@ var divAns = document.getElementById("answerArray");
 var spanX = document.getElementById("xScore");
 var spanY = document.getElementById("yScore");
 
+/** Boolean to determine when a user can click on an answer to advance or
+go back a page; Set temporarily to false immediately upon clicking an answer
+to prevent double-clicking while the page slides, and a timeout function
+should restore back to true after advancing to next page */
+var notTransitioning = true;
+
 
 // Fired when clicking on an answer
 $(".answerClick").click(function(){
@@ -20,26 +30,52 @@ $(".answerClick").click(function(){
   var categoryData = categoryDiv.attr("data-category");
   var answerValue = $(this).attr("data-answer");
 
-  // Add answer and category values to arrays at very front
-  responsesArray.unshift(answerValue);
-  categoryArray.unshift(categoryData);
+  // Adjusting only happens when notTransitioning is true
+  if(notTransitioning == true){
 
-  // Debugging messages to make sure arrays are tracking properly
-  divCat.innerHTML = categoryArray;
-  divAns.innerHTML = responsesArray;
+    // Add answer and category values to arrays at very front
+    responsesArray.unshift(answerValue);
+    categoryArray.unshift(categoryData);
+
+    // Debugging messages to make sure arrays are tracking properly
+    divCat.innerHTML = categoryArray;
+    divAns.innerHTML = responsesArray;
+
+    /** Set notTransitioning to false with a timeout script to prevent
+    double-clicking answers while page slides to next section */
+    notTransitioning = false;
+
+    /** Timeout script, we can also add other interesting effects here
+    mid-transition such as temporarily highlighting the answer clicked */
+    setTimeout(function(){
+      notTransitioning = true;
+    }, 500);
+  }
 });
 
 // Fired when clicking a back button
 $(".goBack").click(function(){
 
-  // Remove values from front position of answer tracking arrays
-  responsesArray.shift();
-  categoryArray.shift();
+  // Adusting only happens when notTransitioning is true
+  if(notTransitioning == true){
+    // Remove values from front position of answer tracking arrays
+    responsesArray.shift();
+    categoryArray.shift();
 
-  // Debugging messages to make sure arrays are tracking properly
-  divCat.innerHTML = categoryArray;
-  divAns.innerHTML = responsesArray;
+    // Debugging messages to make sure arrays are tracking properly
+    divCat.innerHTML = categoryArray;
+    divAns.innerHTML = responsesArray;
 
+    /** Set notTransitioning to false with a timeout script to prevent
+    double-clicking answers while page slides to next section */
+    notTransitioning = false;
+
+    /** Timeout script, we can also add other interesting effects here
+    mid-transition such as temporarily highlighting the answer clicked */
+    setTimeout(function(){
+      notTransitioning = true;
+    }, 500);
+  }
 });
 
 //Adjust CSS of dot on grid using calculated offset values
