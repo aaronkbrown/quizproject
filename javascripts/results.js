@@ -5,7 +5,13 @@ var responsesArray = [];
 // Array for tracking categories
 var categoryArray = [];
 
+// Debugging divs
+var divCat = document.getElementById("categoryArray");
+var divAns = document.getElementById("answerArray");
 
+// Spans for printing numerical results
+var spanX = document.getElementById("xScore");
+var spanY = document.getElementById("yScore");
 
 
 // Fired when clicking on an answer
@@ -17,8 +23,24 @@ $(".answerClick").click(function(){
   // Add answer and category values to arrays at very front
   responsesArray.unshift(answerValue);
   categoryArray.unshift(categoryData);
+
+  // Debugging messages to make sure arrays are tracking properly
+  divCat.innerHTML = categoryArray;
+  divAns.innerHTML = responsesArray;
 });
 
+// Fired when clicking a back button
+$(".goBack").click(function(){
+
+  // Remove values from front position of answer tracking arrays
+  responsesArray.shift();
+  categoryArray.shift();
+
+  // Debugging messages to make sure arrays are tracking properly
+  divCat.innerHTML = categoryArray;
+  divAns.innerHTML = responsesArray;
+
+});
 
 //Adjust CSS of dot on grid using calculated offset values
 $("#getResults").click(function(){
@@ -34,6 +56,12 @@ $("#getResults").click(function(){
 
   // Overall score in Category B questions
   var catBScore = 0;
+
+  // X-axis score in percentage
+  var xScorePercent = 0;
+
+  // Y-axis score in percentage
+  var yScorePercent = 0;
 
   var questionsAnswered = responsesArray.length;
   var questionsCount = 0;
@@ -91,5 +119,12 @@ $("#getResults").click(function(){
   // Adjust CSS positioning of #dot element on #grid by percentage
   $("#dot").css("margin-left", "calc((" + offsetA + " * 100%) - 5px)");
   $("#dot").css("margin-top", "calc((" + offsetB + " * 100%) - 5px)");
+
+  // Calculate final percentage scores of both categories and print them
+  xScorePercent = Math.round(offsetA * 100);
+  yScorePercent = Math.round(100 - (offsetB * 100));
+
+  spanX.innerHTML = xScorePercent + "%";
+  spanY.innerHTML = yScorePercent + "%";
 });
 

@@ -1,3 +1,14 @@
+.wide-container {
+  max-width: 1000px;
+  height: 700px;
+  margin: 0 auto; }
+
+.slides-pagination {
+  display: none; }
+
+.slides-navigation a {
+  position: static; }
+
 #grid {
   margin-top: 2em;
   margin-left: auto;
@@ -18,7 +29,7 @@
   position: absolute;
   transition: 0; }
 
-.answerClick {
+.answerClick, .goBack {
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -27,6 +38,13 @@
   width: 20em;
   height: 1.5em;
   text-align: center; }
+
+.testingDiv {
+  background-color: #c0c0c0;
+  margin: 0.5em auto;
+  display: static;
+  height: 1em;
+  min-width: 20em; }
 
 #getResults {
   height: 30px;
