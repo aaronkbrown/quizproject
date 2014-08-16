@@ -12,7 +12,7 @@ $mobile: "only screen and (max-width: 479px)";
 
 .wide-container {
   max-width: 1000px;
-  height: 500px;
+  height: 700px;
   margin: 0 auto;
 }
 
@@ -63,6 +63,8 @@ $mobile: "only screen and (max-width: 479px)";
   background-color: #c0c0c0;
   margin: 0.5em auto;
   display: static;
+  height: 1em;
+  min-width: 20em;
 }
 
 

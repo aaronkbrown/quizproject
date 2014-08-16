@@ -1,6 +1,6 @@
 .wide-container {
   max-width: 1000px;
-  height: 500px;
+  height: 700px;
   margin: 0 auto; }
 
 .slides-pagination {
@@ -42,7 +42,9 @@
 .testingDiv {
   background-color: #c0c0c0;
   margin: 0.5em auto;
-  display: static; }
+  display: static;
+  height: 1em;
+  min-width: 20em; }
 
 #getResults {
   height: 30px;
