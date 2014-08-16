@@ -1,3 +1,7 @@
+/** SimpleQuiz - v0.1 - 15-08-2014
+http://github.com/aaronkbrown
+Copyright (c) 2014 Aaron Brown;
+*/
 
 // Array for responses
 var responsesArray = [];
