@@ -8,9 +8,10 @@
 .slides-pagination {
   display: none; }
 
-.slides-navigation a {
+.slides-navigation a, .questionSlide a {
   position: static;
-  background-color: blue; }
+  background-color: blue;
+  top: 20%; }
 
 #grid {
   margin-top: 2em;

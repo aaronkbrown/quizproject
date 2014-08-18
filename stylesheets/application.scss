@@ -22,9 +22,10 @@ $mobile: "only screen and (max-width: 479px)";
   display: none;
 }
 
-.slides-navigation a {
+.slides-navigation a, .questionSlide a {
   position: static;
   background-color: blue;
+  top: 20%;
   //width: auto;
 }
 

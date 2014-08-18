@@ -25,10 +25,6 @@ $(document).ready(function(){
   should restore back to true after advancing to next page */
   var notTransitioning = true;
 
-  //var xClickForward = jQuery.makeArray(document.getElementsByClassName("answerClick"));
-  //var xClickBackward = jQuery.makeArray(document.getElementsByClassName("goBack"));
-  var xClickForward = $.makeArray($(".answerClick"));
-  var xClickBackward = $.makeArray($(".goBack"));
 
   
 
@@ -54,30 +50,15 @@ $(document).ready(function(){
       notTransitioning = false;
 
       /** Temporarily remove classes that move the slides while slide is transitioning */
-      for(i = 0; i < xClickForward.length; i++){
-        //var remNext = xClickForward[i];
-        //remNext.removeClass("next");
-        xClickForward[i].removeClass("next");
-      }
-
-      //for(i = 0; i < xClickBackward.length; i++){
-        //xClickBackward[i].removeClass("prev");
-      //}
+      $(".questionSlide > a").css("visibility", "hidden");
+      $(this).css("visibility", "visible");
 
       /** Timeout script, we can also add other interesting effects here
       mid-transition such as temporarily highlighting the answer clicked */
       setTimeout(function(){
         notTransitioning = true;
-
-        //for(i = 0; i < xClickForward.length; i++){
-          //xClickForward[i].addClass("next");
-        //}
-
-        //for(i =0; i < xClickBackward.length; i++){
-          //xClickBackward[i].addClass("prev");
-        //}
-
-      }, 1600);
+        $(".questionSlide > a").css("visibility", "visible");
+      }, 650);
     }
   });
 
@@ -99,16 +80,14 @@ $(document).ready(function(){
       notTransitioning = false;
 
       /** Temporarily remove classes that move the slides while slide is transitioning */
-      xClickForward.removeClass("next");
-      xClickBackward.removeClass("prev");
+      $(".questionSlide > a").css("visibility", "hidden");
 
       /** Timeout script, we can also add other interesting effects here
       mid-transition such as temporarily highlighting the answer clicked */
       setTimeout(function(){
         notTransitioning = true;
-        xClickForward.addClass("next");
-        xClickBackward.addClass("prev");
-      }, 1600);
+        $(".questionSlide > a").css("visibility", "visible");
+      }, 650);
     }
   });
 
