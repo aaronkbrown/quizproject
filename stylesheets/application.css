@@ -1,13 +1,16 @@
 .wide-container {
   max-width: 1000px;
-  height: 700px;
-  margin: 0 auto; }
+  height: 600px;
+  margin: 0 auto;
+  background-color: red;
+  text-align: center; }
 
 .slides-pagination {
   display: none; }
 
 .slides-navigation a {
-  position: static; }
+  position: static;
+  background-color: blue; }
 
 #grid {
   margin-top: 2em;

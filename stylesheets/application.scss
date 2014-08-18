@@ -12,8 +12,10 @@ $mobile: "only screen and (max-width: 479px)";
 
 .wide-container {
   max-width: 1000px;
-  height: 700px;
+  height: 600px;
   margin: 0 auto;
+  background-color: red;
+  text-align: center;
 }
 
 .slides-pagination {
@@ -22,6 +24,8 @@ $mobile: "only screen and (max-width: 479px)";
 
 .slides-navigation a {
   position: static;
+  background-color: blue;
+  //width: auto;
 }
 
 #grid {
