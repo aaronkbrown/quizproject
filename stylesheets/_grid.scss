@@ -1,0 +1,22 @@
+
+#grid {
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $color5;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  border: 5px solid $color5;
+}
+
+#dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: $color6;
+  margin-left: calc(50% - 5px);
+  margin-top: calc(50% - 5px);
+  position: absolute;
+  transition: 0;
+}
