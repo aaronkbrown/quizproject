@@ -87,10 +87,3 @@
   margin-top: calc(50% - 5px);
   position: absolute;
   transition: 0; }
-
-.testingDiv {
-  background-color: #cccccc;
-  margin: 0.5em auto;
-  display: static;
-  height: 1em;
-  min-width: 20em; }
