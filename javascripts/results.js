@@ -62,6 +62,27 @@ $(document).ready(function(){
     }
   });
 
+  // Script to prevent double-clicking answers when starting quiz
+  $(".preQuiz").click(function(){
+    if(notTransitioning == true){
+
+      /** Set notTransitioning to false with a timeout script to prevent
+      double-clicking answers while page slides to next section */
+      notTransitioning = false;
+
+      /** Temporarily remove classes that move the slides while slide is transitioning */
+      $(".questionSlide > a").css("visibility", "hidden");
+      $(this).css("visibility", "visible");
+
+      /** Timeout script, we can also add other interesting effects here
+      mid-transition such as temporarily highlighting the answer clicked */
+      setTimeout(function(){
+        notTransitioning = true;
+        $(".questionSlide > a").css("visibility", "visible");
+      }, 650);
+    }
+  });
+
   // Fired when clicking a back button
   $(".goBack").click(function(){
 

@@ -1,3 +1,7 @@
+header {
+  width: 100%;
+  text-align: center; }
+
 .wide-container {
   max-width: 1000px;
   height: 600px;
@@ -36,12 +40,11 @@
   bottom: 0; }
 
 .slides-navigation a, .questionSlide a {
-  background-color: #a0d0ff;
+  background-color: #cccccc;
   color: #606060; }
 
 .slides-navigation a {
   width: 30%;
-  height: 1.5em;
   position: relative;
   padding-top: 1em;
   padding-bottom: 1em;
@@ -87,3 +90,29 @@
   margin-top: calc(50% - 5px);
   position: absolute;
   transition: 0; }
+
+@font-face {
+  font-family: 'opensansregular';
+  src: url("fonts/OpenSans-Regular-webfont.eot");
+  src: url("fonts/OpenSans-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-Regular-webfont.woff") format("woff"), url("fonts/OpenSans-Regular-webfont.ttf") format("truetype"), url("fonts/OpenSans-Regular-webfont.svg#opensansregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'opensansbold';
+  src: url("fonts/OpenSans-Bold-webfont.eot");
+  src: url("fonts/OpenSans-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-Bold-webfont.woff") format("woff"), url("fonts/OpenSans-Bold-webfont.ttf") format("truetype"), url("fonts/OpenSans-Bold-webfont.svg#opensansbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+h1 {
+  font-family: opensansbold, verdana, sans-serif;
+  color: gray;
+  font-size: 2em; }
+
+p {
+  font-family: opensansregular, helvetica, sans-serif;
+  color: gray;
+  font-size: 1.5em; }
+
+a {
+  font-family: opensansregular, helvetica, sans-serif;
+  color: gray; }
