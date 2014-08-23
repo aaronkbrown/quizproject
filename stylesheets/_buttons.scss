@@ -1,7 +1,7 @@
 
 .slides-navigation a, .questionSlide a {
   background-color: $colorbutton1;
-  color: $color7;
+  color: $colora;
 }
 
 .slides-navigation a {
@@ -13,11 +13,26 @@
   text-decoration: none;
   text-align: center;
   display: block;
+  box-shadow: 0 3px 5px $color4;
   @media #{$tablet2} {
     width: 60%;
   }
   @media #{$mobile} {
     width: 200px;
+  }
+}
+
+.slides-navigation a:hover {
+  //box-shadow: 0 0 20px $colorbutton1;
+  border: 4px solid $colorhighlight1;
+  width: calc(30% - 8px);
+  padding-top: calc(0.5em - 4px);
+  padding-bottom: calc(0.5em - 4px);
+  @media #{$tablet2} {
+    width: calc(60% - 8px);
+  }
+  @media #{$mobile} {
+    width: 192px;
   }
 }
 
@@ -75,4 +90,8 @@
 
 #getResults {
   background-color: $colorbutton2;
+}
+
+#getResults:hover {
+  border: 4px solid $colorhighlight2;
 }
