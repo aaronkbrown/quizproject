@@ -1,10 +1,19 @@
 
 .wide-container {
-  max-width: 1000px;
+  max-width: 950px;
   height: 600px;
   margin: 0 auto;
   //background-color: $color1;
   text-align: center;
+  @media #{$tablet1} {
+    width: 750px;
+  }
+  @media #{$tablet2} {
+    width: 460px;
+  }
+  @media #{$mobile} {
+    width: 98%;
+  }
 }
 
 .slides-pagination {
@@ -41,18 +50,3 @@
   bottom: 0;
 }
 
-.slides-navigation a, .questionSlide a {
-  background-color: $colorbutton1;
-  color: $color7;
-}
-
-.slides-navigation a {
-  width: 30%;
-  //height: 1.5em;
-  position: relative;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  text-decoration: none;
-  text-align: center;
-  display: block;
-}

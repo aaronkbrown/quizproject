@@ -25,17 +25,45 @@ h1 {
   font-family: $font1;
   color: $colorheader1;
   font-size: $size1;
+  @media #{$tablet1} {
+    font-size: $size1 * 0.8;
+  }
+  @media #{$tablet2} {
+    font-size: $size1 * 0.7;
+  }
+  @media #{$mobile} {
+    font-size: $size1 * 0.5;
+  }
 }
 
 p {
   font-family: $font2;
   color: $colorp;
   font-size: $size3;
+  @media #{$tablet1} {
+    font-size: $size3 * 0.8;
+  }
+  @media #{$tablet2} {
+    font-size: $size3 * 0.7;
+  }
+  @media #{$mobile} {
+    font-size: $size3 * 0.5;
+  }
 }
 
 a {
   font-family: $font2;
   color: $colora;
+  font-size: $size3;
+  @media #{$tablet1} {
+    font-size: $size3;
+  }
+  @media #{$tablet2} {
+    font-size: $size3 * 0.8;
+  }
+  @media #{$mobile} {
+    font-size: $size3 * 0.7;
+  }
 }
 
 
