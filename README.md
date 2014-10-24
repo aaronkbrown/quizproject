@@ -14,10 +14,28 @@ Markup
 The markup block for each question is as follows:
 
 ``` html
-HTML CODE BLOCK WILL GO HERE
+<li>
+  <div class="quiztext">
+    <p>Do you agree with this X-axis statement?</p>
+  </div>
+  <div data-category="x-axis" class="slides-navigation questionSlide">
+    <a href="#" class="answerClick next" data-answer="agree">
+      Agree
+    </a>
+    <a href="#" class="answerClick next" data-answer="disagree">
+      Disagree
+    </a>
+    <a href="#" class="answerClick next" data-answer="noAnswer">
+      No answer
+    </a>
+    <a href="#" class="goBack prev">
+      Go back
+    </a>
+  </div>
+</li>
 ```
 
-You can have as many questions in each category as you like.
+The data-category attribute of the second DIV element determines which axis (and therefore which category) the answer value should be assigned to. Each block of markup represents a single question on a single slide, and the markup should fit within the Unordered List element with the class "slides-container." You can have as many questions in each category as you like.
 
 Copyright
 ===========
